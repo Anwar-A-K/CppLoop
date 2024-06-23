@@ -1,0 +1,23 @@
+#include <iostream>
+
+int count = 0;
+
+void shooting() { std::cout << "Player is shooting\n"; }
+void healing() { std::cout << "Player is healing\n"; }
+void attacking() { std::cout << "Player is attacking\n"; }
+
+int main() {
+  for (count = 0; count < 10; count++) {
+    shooting();
+  }
+  count = 0;
+  while (count < 5) {
+    healing();
+    count++;
+  }
+  count = 0;
+  do {
+    attacking();
+    count++;
+  } while (count < 7);
+}
