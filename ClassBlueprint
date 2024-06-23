@@ -1,0 +1,37 @@
+#include <iostream>
+
+using namespace std;
+
+int playerHealth;
+int attackPower;
+
+void gameStory() {
+  cout << "|----------------------------------|\n";
+  cout << "|   WELCOME TO THE ADVENTURE GAME  |\n";
+  cout << "|----------------------------------|\n";
+}
+
+class Player {
+  int health;
+  int attackPower;
+
+public:
+  Player(int h, int a) {
+    health = h;
+    attackPower = a;
+
+    cout << "PLayer health is: " << health << endl;
+    cout << "Player attack power is: " << attackPower << endl;
+  }
+};
+
+int main() {
+  gameStory();
+
+  cout << "Enter player health: ";
+  cin >> playerHealth;
+  cout << endl << "Enter player attack power: ";
+  cin >> attackPower;
+
+  Player player(playerHealth, attackPower);
+}
